@@ -1,3 +1,13 @@
+execute pathogen#infect()
+
+let NERDTreeMapActivateNode='<right>'
+let NERDTreeShowHidden=1
+nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>j :NERDTreeFind<CR>
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
+
 filetype on
 syntax on
 colorscheme dark_eyes
@@ -36,4 +46,6 @@ nnoremap <Leader><Leader> :e#<CR>
 
 set showmatch
 
+set wildignore+=*.log,*.sql,*.cache
 
+noremap <Leader>r :CommandTFlush<CR>

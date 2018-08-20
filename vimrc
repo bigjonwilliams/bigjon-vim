@@ -14,7 +14,7 @@ filetype on
 syntax on
 colorscheme dark_eyes
 
-set guifont=OpenDyslexic3\ Regular:h18
+set guifont=OpenDyslexic3\ Regular:h16
 
 set number
 
@@ -38,7 +38,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 set hlsearch
 
-noremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+nnoremap <silent> <leader>/ :nohlsearch <cr>
 
 " map <D-A-RIGHT> <C-w>l
 " map <D-A-LEFT> <C-w>h
@@ -54,4 +54,10 @@ set wildignore+=*.log,*.sql,*.cache
 noremap <Leader>r :CommandTFlush<CR>
 
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
 autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'

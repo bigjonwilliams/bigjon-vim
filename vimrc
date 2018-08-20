@@ -1,5 +1,7 @@
 execute pathogen#infect()
 
+:set mouse=a
+
 let NERDTreeMapActivateNode='<right>'
 let NERDTreeShowHidden=1
 nmap <leader>n :NERDTreeToggle<CR>
@@ -16,7 +18,8 @@ set guifont=OpenDyslexic3\ Regular:h18
 
 set number
 
-let mapleader=" "
+
+" set mapleader=" "
 
 map <leader>s :source ~/.vimrc<CR>
 
@@ -35,17 +38,20 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 set hlsearch
 
-nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+noremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 
-map <D-A-RIGHT> <C-w>l
-map <D-A-LEFT> <C-w>h
-map <D-A-DOWN> <C-w><C-w>
-map <D-A-UP> <C-w>W
+" map <D-A-RIGHT> <C-w>l
+" map <D-A-LEFT> <C-w>h
+" map <D-A-DOWN> <C-w><C-w>
+" map <D-A-UP> <C-w>W
 
-nnoremap <Leader><Leader> :e#<CR>
+noremap <Leader><Leader> :e#<CR>
 
 set showmatch
 
 set wildignore+=*.log,*.sql,*.cache
 
 noremap <Leader>r :CommandTFlush<CR>
+
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2

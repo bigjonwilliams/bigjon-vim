@@ -4,7 +4,7 @@ Note: This is a personal repo designed to what "I" prefer. Feel free to clone/fo
 
 Install:
 
-cd ~ && mkdir .vim && cd ~/.vim
+cd ~ && mkdir .config && mkdir ./.config/nvim && cd ~/.config/nvim
 
 git clone git@github.com:bigjonwilliams/bigjon-vim.git .
 
@@ -22,3 +22,4 @@ https://github.com/pyenv/pyenv
 https://github.com/scrooloose/nerdtree
 
 http://vim.wikia.com/wiki/Forcing_Syntax_Coloring_for_files_with_odd_extensions
+
